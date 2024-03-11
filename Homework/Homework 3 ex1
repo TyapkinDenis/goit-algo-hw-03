@@ -1,0 +1,7 @@
+from datetime import datetime
+
+def get_days_from_today(date):
+    changed_date = datetime.strptime(date, "%Y-%m-%d")
+    today_data = datetime.today()
+    result = today_data.toordinal() - changed_date.toordinal()
+    return result
